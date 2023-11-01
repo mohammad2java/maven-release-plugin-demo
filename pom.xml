@@ -16,6 +16,13 @@
 	<properties>
 		<java.version>17</java.version>
 	</properties>
+	
+	<scm>
+		<url>https://github.com/mohammad2java/maven-release-plugin-demo</url>
+		<connection>scm:git:ssh://git@github.com:mohammad2java/maven-release-plugin-demo.git</connection>
+		<developerConnection>scm:git:ssh://git@github.com:mohammad2java/maven-release-plugin-demo.git</developerConnection>
+		<tag>release/${project.version}</tag>
+	</scm>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
