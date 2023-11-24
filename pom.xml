@@ -32,14 +32,18 @@
 	</dependencies>
 
 
-
-<distributionManagement>
-    <snapshotRepository>
-        <id>snapshots</id>
-        <name>a0yzqrcfrybgr-artifactory-primary-0-snapshots</name>
-        <url>https://amirjfrog22.jfrog.io/artifactory/libs-snapshot</url>
-    </snapshotRepository>
-</distributionManagement>
+	<distributionManagement>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>a0yzqrcfrybgr-artifactory-primary-0-snapshots</name>
+			<url>https://amirjfrog22.jfrog.io/artifactory/libs-snapshot</url>
+		</snapshotRepository>
+		<repository>
+			<id>central</id>
+			<name>a0yzqrcfrybgr-artifactory-primary-0-releases</name>
+			<url>https://amirjfrog22.jfrog.io/artifactory/libs-release-local</url>
+		</repository>
+	</distributionManagement>
 
 	<build>
 		<plugins>
