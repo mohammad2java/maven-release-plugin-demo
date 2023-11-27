@@ -16,6 +16,7 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>1.8</java.version>
+		<project.scm.id>github</project.scm.id>
 	</properties>
 
 	<dependencies>
@@ -32,12 +33,8 @@
 	</dependencies>
 
 	<scm>
-		<connection>
-			scm:git:https://github.com/mohammad2java/maven-release-plugin-demo.git</connection>
-		<developerConnection>
-			scm:git:https://github.com/mohammad2java/maven-release-plugin-demo.git</developerConnection>
-		<tag>HEAD</tag>
-		
+		<developerConnection>scm:git:https://github.com/mohammad2java/maven-release-plugin-demo.git</developerConnection>
+		<url>https://github.com/mohammad2java/maven-release-plugin-demo</url>
 	</scm>
 
 
