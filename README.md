@@ -1,7 +1,7 @@
 ##MAVEN RELEASE PLUGIN
 ------------------------------
 
-##there are 2 commond
+##there are 2 command
 ---------------------	
 	mvn -B clean release:prepare
 	mvn clean release:perform
