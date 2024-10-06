@@ -15,7 +15,6 @@
 	<properties>
 		<java.version>1.8</java.version>
 		<project.scm.id>github-mohammad2java</project.scm.id>
-		<autoVersionSubmodules>true</autoVersionSubmodules>
 	</properties>
 
 	<dependencies>
