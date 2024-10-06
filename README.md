@@ -1,13 +1,14 @@
 ##MAVEN RELEASE PLUGIN
 ------------------------------
 
-##there are 2 command
+##There are 2 command
 ---------------------	
 	mvn -B clean release:prepare
 	mvn clean release:perform
 	
 
 ##Required configuration for same with github
+------------------------------------------------
 
 	[package will be release on github]
     ------------------------------------
@@ -19,7 +20,8 @@
 	</properties>
 	 
 	 
-	 1) scm configuration for meta-data
+	 2) scm configuration for meta-data
+	 ---------------------
 	 
 	 <scm>
 		<developerConnection>
@@ -28,7 +30,8 @@
 		<tag>maven-release-plugin-demo-1.0.1</tag>
 	</scm>
 	
-	 2) distributionManagement configuration for uploading artifacts/package
+	 3) distributionManagement configuration for uploading artifacts/package
+	 ----------------------
 	 
 	 <distributionManagement>
 
@@ -40,7 +43,8 @@
 		</repository>
 	</distributionManagement>
 	
-	3) for maven-release-plugin configuration to tell about autoversioning tagging name ..etc
+	4) for maven-release-plugin configuration to tell about auto-versioning tagging name ..etc
+	------------------
 	
 	<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -51,7 +55,11 @@
 					<goals>deploy</goals> 
 					<tagNameFormat>v@{project.version}</tagNameFormat>
 				</configuration>
-			</plugin>
+	</plugin>
+	
+	
+	
+	End
 			
 			
 	 
