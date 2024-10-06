@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -39,15 +41,12 @@
 
 
 	<distributionManagement>
-		<snapshotRepository>
-			<id>snapshots</id>
-			<name>a0yzqrcfrybgr-artifactory-primary-0-snapshots</name>
-			<url>https://amirjfrog22.jfrog.io/artifactory/libs-snapshot</url>
-		</snapshotRepository>
+
 		<repository>
-			<id>central</id>
-			<name>a0yzqrcfrybgr-artifactory-primary-0-releases</name>
-			<url>https://amirjfrog22.jfrog.io/artifactory/libs-release-local</url>
+			<id>github-mohammad2java</id>
+			<name>GitHub Packages</name>
+			<url>
+				https://maven.pkg.github.com/mohammad2java/maven-release-plugin-demo</url>
 		</repository>
 	</distributionManagement>
 
@@ -64,7 +63,14 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
-				<version>2.5.3</version>
+				<version>3.0.0-M1</version>
+				<configuration>
+					<autoVersionSubmodules>true</autoVersionSubmodules> <!--
+					Version submodules automatically -->
+					<goals>deploy</goals> <!-- Goal to trigger after the release -->
+					<tagNameFormat>v@{project.version}</tagNameFormat> <!--
+					Format the tag name -->
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
