@@ -2,7 +2,7 @@
 
 :: Run Maven release:prepare
 echo Running Maven release:prepare...
-mvn release:prepare -DautoVersionSubmodules=true
+mvn -B clean release:prepare -DautoVersionSubmodules=true
 if %ERRORLEVEL% NEQ 0 (
     echo Maven release:prepare failed. Exiting...
     exit /b %ERRORLEVEL%
@@ -10,7 +10,7 @@ if %ERRORLEVEL% NEQ 0 (
 
 :: Run Maven release:perform
 echo Running Maven release:perform...
-mvn release:perform
+mvn clean release:perform
 if %ERRORLEVEL% NEQ 0 (
     echo Maven release:perform failed. Exiting...
     exit /b %ERRORLEVEL%
